@@ -13,3 +13,6 @@ public class one {
 
     }
 }
+
+// OUTPUT :
+// DHVWD
