@@ -96,3 +96,13 @@
 
 //op : 4 3 2 1 0
 //when it become 0 the recursion base condition fails and return and print the values.
+
+// int main(){
+// static int i=5;
+// printf("%d",i);
+//    if(--i){
+//    main(); 
+//}
+//op : 5 4 3 2 1 
+
+
