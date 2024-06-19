@@ -170,3 +170,28 @@
 
 //op : 21
 
+//7)
+// int main(){
+//     int i;
+//     i=1,2,3; //(i=1),2,3;
+//     printf("i = %d\n",i);
+
+//     return 0;
+// }
+
+//operator precedence = has higher precedence over ,
+
+//op : i=1
+
+//try it out 
+
+// int main(){
+//     int i;
+//     i=(1,2,3); //
+//     printf("i = %d\n",i);
+
+//     return 0;
+// }
+
+//op : i=3
+
