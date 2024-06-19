@@ -106,3 +106,30 @@
 //op : 5 4 3 2 1 
 
 
+//5)
+// int main()
+// {
+//     int x;
+//     printf("%d",scanf("%d",&x));
+//     // if input value given for above scanf is 20
+//     //scanf will do gow many input it takes - it takes 1 input and print taht 1 input
+//     //scanf returns the no.of successful inputs.
+//     return 1;
+// }
+
+//op : 1
+
+//try it out 
+// int main()
+// {
+//     int x;
+//     printf("%d",scanf("%d",&x));
+//     // if input value given for above scanf is 35
+//     return 0;
+// }
+
+//op : 1
+
+
+
+
