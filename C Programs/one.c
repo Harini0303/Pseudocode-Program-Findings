@@ -131,5 +131,42 @@
 //op : 1
 
 
+//6)
+// int main(){
+//     int first =50;
+//     int second =60,third;
+//     third = first /*Code.io*/ + second;
+//     //is this comment between first and second will affect the exptression?
+//     //what happen if the comment is inbetween the double quotes"" - will it print it or not
+//     printf("%d/*Like*/\n, third");
+//     return 0;
+// }
 
+//if there is comment what the c complier will do?
+//the compiler will renove the comments first 
+// but if its is in double quotes or quotes - it will not remove the comments
+
+
+//op : 110/*Like*/
+
+//if we give the comments in between the unary operators - it will also give error
+
+// int main(){
+//     for(int i=2;i!=0;i-/*code*/-){
+//         printf("%d",i);
+//     }
+//     return 0;
+// }
+
+//op: it will show an error
+
+//try it out 
+// int main(){
+//     for(int i=2;i!=0;i-=/*code*/1){
+//         printf("%d",i);
+//     }
+//     return 0;
+// }
+
+//op : 21
 
