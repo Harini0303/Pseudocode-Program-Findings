@@ -187,11 +187,29 @@
 
 // int main(){
 //     int i;
-//     i=(1,2,3); //
+//     i=(1,2,3); //if we store the values in parameters it stores the last value
 //     printf("i = %d\n",i);
 
 //     return 0;
 // }
 
 //op : i=3
+
+//8)
+int main()
+{
+    int c =5, no=1000;
+    do{
+        no/=c;
+
+    }while(c--);
+
+    printf("%d\n",no);
+    return 0;
+}
+
+ // c --> 5 4 3 2 1 0 end 
+ //no -> 1000 200 50 16 8 8 error - it will exception 
+
+ //op : error
 
