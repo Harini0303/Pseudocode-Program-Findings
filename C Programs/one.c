@@ -281,34 +281,85 @@
 //op : 65001
 
 //11)
-int main()
-{
-    char str[] = "codeio";
-    char *s1 = str;
+// int main()
+// {
+//     char str[] = "codeio";
+//     char *s1 = str;
 
-    for(int i=0;i<4;i++){
-        printf("%c",*str); //*str always points to the first element
-        s1++;// s1 will move for 4 iteration - also see screenshort if you needed
-    }
-    return 0;
-}
+//     for(int i=0;i<4;i++){
+//         printf("%c",*str); //*str always points to the first element
+//         s1++;// s1 will move for 4 iteration - also see screenshort if you needed
+//     }
+//     return 0;
+// }
 
 //op : cccc
 
 //try it out
-int main()
-{
-    char str[] = "Like this video";
-    char *s1 = str;
+// int main()
+// {
+//     char str[] = "Like this video";
+//     char *s1 = str;
 
-    for(int i=0;i<4;i++){
-        printf("%c",*s1); 
-        s1++;
-    }
-    return 0;
-}
+//     for(int i=0;i<4;i++){
+//         printf("%c",*s1); 
+//         s1++;
+//     }
+//     return 0;
+// }
 
 //op :Like
+
+//12)
+// int main()
+// {
+//     signed char i=0;
+//     for(;i>=0;i++);
+//     printf("%d\n",i);
+
+//     return 0;
+// }
+
+//op : before that the loop goes like --> 0 1 2 ... 127 then it croos the limit of signed datatype so it change into -128
+// then the OP : -128
+
+//signed char i=0;
+// printf("%d\n",i);
+// this take %d as integer data type 
+// so the op is 0
+//if
+// signed char i=0;
+// printf("%c\n",i); // it takes the character datatype so teh op is .(dot)
+
+//signed char
+// char - 1 byte = 8 bits
+// 2^8 = 256
+// signed char =[-128,127]
+
+//try it out
+// int main()
+// {
+//     unsigned char i=-130;
+//     for(;i>=0;i++);
+//     printf("%d\n",i);
+
+//     return 0;
+// }
+
+//op : error
+//unsigned values are from 0 to 255
+
+// int main()
+// {
+//     unsigned char i=-130;
+//     for(;i>=0;i++);
+//     printf("%d\n",i);
+
+//     return 0;
+// }
+
+//op : warning then -128
+// -128
 
 
 
