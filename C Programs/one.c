@@ -196,20 +196,122 @@
 //op : i=3
 
 //8)
-int main()
-{
-    int c =5, no=1000;
-    do{
-        no/=c;
+// int main()
+// {
+//     int c =5, no=1000;
+//     do{
+//         no/=c;
 
-    }while(c--);
+//     }while(c--);
 
-    printf("%d\n",no);
-    return 0;
-}
+//     printf("%d\n",no);
+//     return 0;
+// }
 
  // c --> 5 4 3 2 1 0 end 
  //no -> 1000 200 50 16 8 8 error - it will exception 
 
  //op : error
+
+ // TRY IT OUT
+//  int main()
+//  {
+//     int c=3,no=30;
+//     do{
+//         no/=c;
+//         printf("%d\n",no);
+//     }while(c!=0);
+
+//     return 0;
+//  }
+
+//op : 10 3 1 ....(infinite loop)
+
+//9)
+// #define prod(a,b) a*b
+// int main()
+// {
+//     int x = 3, y=4;
+//     printf("%d", prod(x+2,y-1));
+//     return 0;
+// }
+
+//op : iguess the answwer was 15 but the ANSWER IS 10 
+//due to precendece operator
+// prod(x+2,y-1)
+// x+2*y-1
+// 3+(2*4)-1
+// 3+8-1
+// 10
+
+//try it out
+// #define prod(a,b) a*b
+// int main()
+// {
+//     int x = 2, y=6;
+//     printf("%d", prod(x+2,y));
+//     return 0;
+// }
+//op : 14
+
+//10)
+// int main()
+// {
+//     short int i=65000; //for teh short int there is a maximum limit (dead end)
+//     while(i++ != 0);
+//     printf("%d",i);
+//     return 0;
+// }
+
+//the loop goes like 65000->65001->..... INT_MAX then the i become 0
+// then here the condition also failed 0 !=0
+//then i meet an operator so 0 become 1 
+// then print 1 
+//op : 1
+
+//try it out
+// int main()
+// {
+//     unsigned int i=65000; 
+//     while(i++ != 65000);
+//     printf("%d",i);
+//     return 0;
+// }
+
+//op : 65001
+
+//11)
+int main()
+{
+    char str[] = "codeio";
+    char *s1 = str;
+
+    for(int i=0;i<4;i++){
+        printf("%c",*str); //*str always points to the first element
+        s1++;// s1 will move for 4 iteration - also see screenshort if you needed
+    }
+    return 0;
+}
+
+//op : cccc
+
+//try it out
+int main()
+{
+    char str[] = "Like this video";
+    char *s1 = str;
+
+    for(int i=0;i<4;i++){
+        printf("%c",*s1); 
+        s1++;
+    }
+    return 0;
+}
+
+//op :Like
+
+
+
+
+
 
