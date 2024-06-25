@@ -362,6 +362,124 @@
 // -128
 
 
+//13)
+int main()
+{
+    char arr[] ={'a','b'};
+    char *p = arr;
+    if(&p == &arr){
+        printf("Same");
+    }else{
+        printf("Not Same");
+  }
+  return 0;
+}
+
+//&arr-----
+//        |
+//arr[]=  a,    b
+     // *arr
+     // *p
+// & operator
+// memory address - variable&p - location where p is stored
+// ------
+// int p=5;
+// printf("%d",&p); // 191346706
+
+//try it out 
+
+// int main()
+// {
+//     char arr[] ={'a','b'};
+//     char *p = arr;
+//     if(p == &arr){ // true
+//         printf("Same");
+//     }else{
+//         printf("Not Same");
+//   }
+//   return 0;
+// }
+
+//op : Same
+//*p - first element of arr
+// p- memory adress of *p
+
+
+//14)
+int main()
+{
+    char arr[] = {1,2,3};
+    char *p = arr;
+    printf("%d", sizeof(p));
+    printf("%d", sizeof(arr));
+    return 0;
+}
+
+//op :8 3
+
+// char arr[] = {1,2,3};
+// char *p = arr;
+// arr[] = 1,2,3
+//        *arr - pointing to 1
+//        *p
+
+// size of char pointer = 8 bytes
+//  printf("%d", //8);
+//  size of 1 char. -1 byte
+//  len(arr) =3
+//  sizeof(arr) = 1*3
+//              = 3 bytes
+//     printf("%d", sizeof(arr));
+//                    3
+
+//try it out
+// int main()
+// {
+//     int arr[] = {1,2,3};
+//     char *p = arr;
+//     printf(" %d ", sizeof(p));
+//     printf(" %d ", sizeof(arr));
+//     return 0;
+// }
+
+//op : 8 12
+
+//size of 1 int - 2/4 bytes
+//len(arr) =3
+//sizeof(arr) = 4*3
+//           =12 bytes   
+
+//15)
+int main()
+{
+    int a =1;
+    int b=1;
+    int c = a|| --b; // if any one is true then the experession is true
+    int d = a-- && --b; //if both true only true else false
+    printf("a = %d, b = %d ",a,b);
+    printf("c = %d, d = %d ",c,d);
+    return 0;
+}
+
+//op : a=0, b=0 c=1,d=0
+
+
+//try it out
+int main()
+{
+    int a =1;
+    int b=0;
+    int c = a|| --b; 
+    int d = a-- && --b;
+    printf("a = %d, b = %d ",a,b);
+    printf("c = %d, d = %d ",c,d);
+    return 0;
+}
+
+//op : a =0, b=-1 c=1,d=1
+
+
+
 
 
 
