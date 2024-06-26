@@ -406,14 +406,14 @@ int main()
 
 
 //14)
-int main()
-{
-    char arr[] = {1,2,3};
-    char *p = arr;
-    printf("%d", sizeof(p));
-    printf("%d", sizeof(arr));
-    return 0;
-}
+// int main()
+// {
+//     char arr[] = {1,2,3};
+//     char *p = arr;
+//     printf("%d", sizeof(p));
+//     printf("%d", sizeof(arr));
+//     return 0;
+// }
 
 //op :8 3
 
@@ -450,37 +450,71 @@ int main()
 //           =12 bytes   
 
 //15)
-int main()
-{
-    int a =1;
-    int b=1;
-    int c = a|| --b; // if any one is true then the experession is true
-    int d = a-- && --b; //if both true only true else false
-    printf("a = %d, b = %d ",a,b);
-    printf("c = %d, d = %d ",c,d);
-    return 0;
-}
+//  
 
 //op : a=0, b=0 c=1,d=0
 
 
 //try it out
-int main()
-{
-    int a =1;
-    int b=0;
-    int c = a|| --b; 
-    int d = a-- && --b;
-    printf("a = %d, b = %d ",a,b);
-    printf("c = %d, d = %d ",c,d);
-    return 0;
-}
+// int main()
+// {
+//     int a =1;
+//     int b=0;
+//     int c = a|| --b; 
+//     int d = a-- && --b;
+//     printf("a = %d, b = %d ",a,b);
+//     printf("c = %d, d = %d ",c,d);
+//     return 0;
+// }
 
 //op : a =0, b=-1 c=1,d=1
 
 
+//16)
+// int main()
+// {
+//     int x,y=5,z=5;
+//     x=y==z;
+//     printf("%d",x);
+//     return 0;
+// }
+
+//OP : 1
+
+//comparision operator has more precendence than assignement operators
+// x= 5==5
+// x=(5==5)
+// x=true =1
+
+//try it out
+// int main()
+// {
+//     int x,y=5,z=5;
+//     x+=y==z; // x= x+1
+//     printf("%d",x);
+//     return 0;
+// }
+
+//op : 1 ( new compilers) if it is old then it is garbage collection
 
 
+//17)
+// int main()
+// {
+//     char arr[] = "codeio"; // c o d e i o \0
+//     printf("%d",sizeof(arr));// thhat char array wil go untill 0 to falag zero (null char)
+//     return 0;
+// }
 
+//op : 7
 
+//try it out
+// int main()
+// {
+//     char arr[] = "\tcodeio"; 
+//     printf("%d",sizeof(arr));
+//     return 0;
+// }
+
+//OP : 8
 
