@@ -409,7 +409,7 @@ int main()
 // int main()
 // {
 //     char arr[] = {1,2,3};
-//     char *p = arr;
+//     char *p = arr;p
 //     printf("%d", sizeof(p));
 //     printf("%d", sizeof(arr));
 //     return 0;
@@ -511,10 +511,67 @@ int main()
 //try it out
 // int main()
 // {
-//     char arr[] = "\tcodeio"; 
+//     char arr[] = "\tcodeio";  // for the tab 1 word 6 then null char 1
 //     printf("%d",sizeof(arr));
 //     return 0;
 // }
 
 //OP : 8
 
+//18)
+//replace ? with something to get "geeks"
+int main()
+{
+    char arr[] ="geeksforgeeks";
+    printf("%s",?);//%s -  set charactes/string
+    return 0;
+}
+
+//ans : arr+8
+
+//q: 2
+int main()
+{
+    printf("\"Hello%%World\""); //"" ourt is string
+    return 0;
+}
+
+// OP : "Hello%World"
+// why do we using escape characters?
+//  '\"' = '"'
+//  "%d" = 'int'
+//  "%%"='%'
+
+//try it out
+int main()
+{
+    char arr[] = "25";
+    int num =  100;
+    printf("%s%% of %d =?",arr,num);
+
+    return 0;
+}
+
+//OP : 25% of 100 =?
+
+//19)
+int func(int i)
+{
+    if(i%2){ // if odd =11 // op : 11 
+        return (i++);
+    }
+    else{ //even - 12
+        return func(func(i-1)); // op : 11
+    }
+}
+
+int main()
+{
+    printf("%d\n",func(12));
+    printf("%d",func(11));
+
+    return 0;
+}
+
+//OP :11
+      11
