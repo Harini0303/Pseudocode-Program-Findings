@@ -784,7 +784,7 @@ int main()
 {
     int i,j,p=2,q=0;
 
-    for(int i=0,j=-1;i<p,j<q;i++,j++)
+    for(int i=0,j=-1;i<p,j<q;i++,j++) //i<p is cannot consider
     printf("Code io\n");
 
   return 0;
@@ -797,23 +797,61 @@ int main()
 int main()
 {
     https://www.google.com;
+    //this above is not a url i.e
+    //goto label + comment
+    //https: -> if we are in one line and want to go to another line - then we can use goto statemenet
     printf("Hello");
 
     return 0;
 }
+//no error
+//OP : Hello
 
 //try it out
 int main()
 {
-    https:
+    https: // that goto will again call that -> it will run for the infinite times.
     printf("Hello");
     goto https;
+    // goto is used as label and https is as a identifier.
 
     return 0;
 }
 
+//OP : infiniyte loop
 
 //28)
+
+int main()
+{
+    int arr[2][2] = {{1,2},{3,4}};
+    for(int i=0;i<2;i++){
+        for(int j=0;j<2;j++){
+            printf("%d ",j[i[arr]]);  // arr[i][j] == j[i[arr]]
+        }
+    }
+    return 0;
+}
+
+//OP : 1 2 3 4 
+
+
+//try it out
+int main()
+{
+    int arr[2][2] = {{1,2},{3,4}};
+    for(int i=0;i<2;i++){
+        for(int j=0;j<2;j++){
+            printf("%d ",i[j[arr]]);  // arr[j][i] == i[j[arr]]
+        }
+    }
+    return 0;
+}
+
+//op :1 3 2 4
+
+
+
 
 
 
