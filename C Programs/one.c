@@ -850,8 +850,61 @@ int main()
 
 //op :1 3 2 4
 
+//29)
+
+int main()
+{
+    int arr[3] ={00001,00100,10000};
+
+    for(int i=0;i<3;i++){
+        printf("%d ",arr[i]);
+    }
+    return 0;
+}
+
+//c compilers also understand OCTAL SYSTEM only
+//unit sigit tens digit ...
+//if the number start with 0 -> only use ocatal otherwise the numbers only
+
+//OP : 1 64 10000
 
 
+//try it out
 
+int main()
+{
+    int arr[3] ={010,0010,00010};
 
+    for(int i=0;i<3;i++){
+        printf("%d ",arr[i]);
+    }
+    return 0;
+}
 
+// OP : 8 8 8 
+ 
+ 
+//30)
+int main()
+{
+    int a,b = 10;
+    a = -b--; //-(b--)  // b=9 , a=-10
+    printf("%d %d",a,b);
+    return 0;
+}
+
+//OP : -10 9
+
+//-a , a-- same precenedence 
+// both unary operators
+
+//try it out
+int main()
+{
+    int a,b = 5;
+    a = -b++; 
+    printf("%d %d",a,b);
+    return 0;
+}
+
+// op : -5 , 6
