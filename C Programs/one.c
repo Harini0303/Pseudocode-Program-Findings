@@ -933,6 +933,19 @@ int main()
 
 
 //32)
+
+int main()
+{
+    int a = rand() % 1;
+    printf("%d",a);
+
+    return 0;
+}
+
+//OP  : 0
+
+//33)
+
 union test{
     int x,y;
     char arr[8];
@@ -942,6 +955,135 @@ union test{
     return 0;
  }
 
+ //OP : 8
+
  //sizeof(u)
  //int x,y - 4,4
  //char arr[8]-8
+
+ //we think the total size is 16
+ //but 
+ // due to union
+ //but we we use struct then - op will be 16
+ //union in C is a user-defined data type where all members share the same memory location
+
+ //try it out
+ union test{
+    double x,y;
+    int arr[8];
+}u;
+ int main(){
+    printf("%d",sizeof(u));
+    return 0;
+ }
+
+// op : 32
+//double 8 bytes two 8,8-> 16
+//int arr[8] => 4*8 = 32
+//Max(8,8,32) = 32
+
+
+//34)
+
+void main()
+{
+    int m, i=0,j=1,k=2;
+    m = i++ || j++ || k++;
+//      0      
+//      0      1       
+//      0      1   
+//here the middle element is true so the output also true 
+//directly stores the value of m
+    printf("%d %d %d %d",m,i,j,k);
+}
+
+//OP : 1 1 2 2 
+
+
+//try it out
+void main()
+{
+    int m=5, i=0,j=5,k=1;
+    m = i++ || j++ && k++;
+    printf("%d %d %d %d",m,i,j,k);
+}
+
+// op : 1 1 6 2
+
+//35)
+
+int main()
+{
+    char buf[4] = {1,2,3,4};
+    char p = (buf + 1) [2];
+    printf("%d",p);
+    return 0;
+}
+
+// OP : 4
+// buf[2] = *(buf + 2)
+
+
+//36)
+
+int main()
+{
+    char buf[4] = {1,2,3,4};
+    char p = (buf + 0) [0];
+    printf("%d",p);
+    return 0;
+}
+
+//  OP : 1
+// buf[2] = *(buf + 2)
+//        = buf[0]
+
+
+//37)
+
+int main()
+{
+    printf("%m");
+    return 0;
+
+}
+
+
+// op : Success
+
+// %d - int
+// GNU C LIBRARY - C Std. LIBRARY in that
+// %m - Success
+
+//%m%c - char 
+
+int main()
+{
+    printf("%m%%d");
+    return 0;
+
+}
+
+ // op : Success%d
+
+
+ int main()
+ {
+    printf(2 + "codeio"); // no error
+    return 0;
+ }
+
+
+// op : deio
+ // code io will be like char arr 
+ // C O D E I O
+
+
+ //try it out
+ int main()
+ {
+    printf(0 +"Like");
+    return 0;
+ }
+
+ // OP : Like
