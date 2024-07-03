@@ -908,3 +908,40 @@ int main()
 }
 
 // op : -5 , 6
+
+//31)
+int main()
+{
+   int a =0;
+   a = (a++)+(a++)-(a++)+(++a);
+    //   0      1     2       4
+   printf("%d",a);
+   return 0; 
+}
+
+
+//try it out
+int main()
+{
+   int a =5;
+   a = (a++)+(a--)-(a++)+(--a);
+   printf("%d",a);
+   return 0; 
+}
+
+//OP : 11
+
+
+//32)
+union test{
+    int x,y;
+    char arr[8];
+}u;
+ int main(){
+    printf("%d",sizeof(u));
+    return 0;
+ }
+
+ //sizeof(u)
+ //int x,y - 4,4
+ //char arr[8]-8
