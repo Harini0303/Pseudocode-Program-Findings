@@ -1087,3 +1087,105 @@ int main()
  }
 
  // OP : Like
+
+
+ //38)
+
+ void main()
+ {
+    int a = 5;
+    float b;
+    printf("%d ",sizeof(++a + b));
+    printf("%d ",a);
+ }
+
+ //OP : 4 5 
+
+// sizeof(++a + b)
+// sizeof(int + float)
+// sizeof(float)
+// float -> 4
+//lower datatype will be converted  into larger datatype
+
+
+//try it out
+ void main()
+ {
+    float a = 1.0;
+    double b;
+    printf("%d ",sizeof(--a - b));
+    printf("%f ",a);
+ }
+
+// op : 8 1.0
+
+
+//39)
+int main()
+{
+    register int i;
+    scanf("%d",&i);
+    printf("%d",i);
+    return 0;
+}
+
+// OP : error: address of register variable ‘i’ requested
+// register variable
+// store in CPU register instead of memory
+
+//try it out
+int main()
+{
+    //input : 100101
+     int i;
+    scanf("%d",&i);
+    printf("%d",i);
+    return 0;
+}
+
+//OP : 100101
+
+//40)
+void main()
+{
+    int a =5,b=10;
+    {
+        int a =2;
+        a++;
+        b++;
+    }
+    printf("%d %d",a,b);
+}
+// op : 5 11
+
+//local var , enclosing arrea var , global var  check by compilers
+
+void main()
+{
+    int a =5,b=10;
+    {
+        int a =2;
+        a++;
+        b++;
+        printf("%d %d\n",a,b);
+    }
+    printf("%d %d",a,b);
+}
+
+// op :
+// 3 11
+// 5 11
+
+//try it out
+void main()
+{
+    int a =3,b=7;
+    {
+        int a =1;
+        a++;
+        b++;
+    }
+    printf("%d %d",a,b);
+}
+
+// OP : 3 8
