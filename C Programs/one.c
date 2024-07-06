@@ -1189,3 +1189,164 @@ void main()
 }
 
 // OP : 3 8
+
+//41)
+
+int main()
+{
+    int x =10,*y,**z;
+    y = &x;
+    z=&y;
+
+    printf("%d ",*y);
+    printf("%d ",**z);
+    printf("%d ",*(*z)); // same as above 
+}
+
+
+// OP : 10 10 10
+
+
+//  x          y           z
+ // 10        &101        &105
+// 101        105         107
+
+//try it out
+void main()
+{
+    int x = 1, *y, **z;
+    y=&x;
+    z=&y;
+
+    printf("%d ", *y);
+    printf("%d ", *z);
+    
+}
+
+// op : 1 memory address of 1
+// OP : 1 1249266740 
+
+//42)
+void main()
+{
+    int a =1,b=2,c=3;
+    char d =0;
+    if(a,b,c,d){
+        printf("code io");
+    }
+}
+
+
+ // op : no output empty
+
+// if(a,b) // if there is comma means  it calculate both the sides of left and right then it return the right side 
+// so here if b true the if block will execute
+// depends on b
+
+//if(d) -> 0 // so there is no output
+
+void main()
+{
+    int a =0,b=0,c=0;
+    char d =1;
+    if(a,b,c,d){
+        printf("code io");
+    }
+}
+
+//OP : code io
+
+//try it out
+
+void main()
+{
+    int a =1,b=2,c=3;
+    char d =0;
+    if(a,!b,c,!d){
+        printf("code io");
+    }
+}
+
+// op : code io
+
+
+
+//43)
+int main()
+{
+    char* str = "codeio";
+    printf("%c", *&*str); // &* are cancel out because there are deference , so *str => c
+    return 0;
+}
+
+
+// op : c
+
+// c     o      d     e     i     O
+ //*str
+
+ //try it out
+ int main()
+ {
+    char* str = "codeio";
+    printf("%c",&**str);
+    return 0;
+ }
+
+ // op : it show error
+
+ //44)
+ int main()
+ {
+    if(printf("coding ")){
+        switch(printf("is"))
+          while(printf("is"))
+          return 0;
+    }
+ }
+
+ // OP : coding is
+
+//  #include <stdio.h>
+
+// int main()
+// {
+//     if (printf("coding")) {
+//         switch (printf("is")) {
+//             while (printf("is"))
+//                 return 0;
+//         }
+//     }
+//     return 0;
+// }
+
+
+ // coding : len = 6
+//  if(6)
+//  switch(2)
+
+// try it out
+int main()
+ {
+    if(printf("coding ")){
+        switch("\n")
+    case 1:
+    printf("is fun")
+     return 0;
+    }
+ }
+
+
+//  #include <stdio.h>
+
+// int main()
+// {
+//     if (printf("coding ")) {
+//         switch (1) {  // switch statement requires an integer expression
+//             case 1:
+//                 printf("is fun");
+//                 return 0;
+//         }
+//     }
+//     return 0;
+// }
