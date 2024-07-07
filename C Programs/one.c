@@ -1325,16 +1325,34 @@ int main()
 //  if(6)
 //  switch(2)
 
+
 // try it out
 int main()
  {
-    if(printf("coding ")){
-        switch("\n")
-    case 1:
-    printf("is fun")
+    if(printf("coding "))
+        switch(printf("\n"))
+          case 1:
+             printf("is fun")
      return 0;
-    }
  }
+
+ //OP : 
+// coding 
+// is fun
+
+
+// #include <stdio.h>
+
+// int main() {
+//     if (printf("coding ")) {
+//         switch (printf("\n")) {
+//             case 1:
+//                 printf("is fun");
+//                 break;
+//         }
+//     }
+//     return 0;
+// }
 
 
 //  #include <stdio.h>
@@ -1350,3 +1368,190 @@ int main()
 //     }
 //     return 0;
 // }
+
+
+
+//45)
+void main()
+{
+    int x =4,y=4,z=4;
+    if(x==y==z)
+       printf("Yes");
+    else 
+       printf("No");
+}
+
+//OP : No
+
+// 4==4==z
+// both are equal to so they are same precendece so the computer get confused and start eveluate from left to right
+// so
+// 4==4 means true
+// 1==z
+// 1==4 false
+
+
+//Try it out
+void main()
+{
+    int x =4,y=4,z=2;
+    if(x==y==z--)
+       printf("Yes");
+    else 
+       printf("No");
+}
+
+
+//OP :No
+
+
+//46)
+void main()
+{
+    int i,j=3;
+    float k=7;
+    i=k%j; //7.0%3 
+    printf("%d",i);
+}
+
+//OP : error(fatal error)
+
+//modulo is defined  for two integer
+
+//try it out
+void main()
+{
+    int i,j=3;
+    float k=7;
+    i=fmod(k,j);
+    printf("%d",i);
+}
+
+//OP : 1
+
+
+//47)
+void main()
+{
+    int a,b=1;
+    int x[5] = {1,2,3,4,5};
+    a=5*4 + x[--b]-(9/b);
+    printf("%d",a);
+}
+
+
+// OP : Floating point exception
+
+// a=5*4 + x[--b]-(9/b);
+// a=5*4 + 1-(9/b);
+// a=5*4 + 1-(9/0); // error
+
+
+
+//Try it out
+void main()
+{
+    int a,b=1;
+    int x[5] = {1,2,3,4,5};
+    a=5*4 + x[b++]-(9/b);
+    //5*4+2-(4)
+    printf("%d",a);
+}
+
+// OP : 18
+
+
+//48)
+void main()
+{
+    int a =9;
+    float x;
+    x=a/2;
+    printf("%f",x);
+}
+
+//OP :4.0
+
+
+//Try it out
+void main()
+{
+    int a =9;
+    float x;
+    x= (float)a/2;
+    printf("%f",x);
+}
+
+//OP : 4.5000
+
+//49)
+void main()
+{
+    int x=0,k;
+    while(+(+x--)!=0)
+      x++;
+    printf("%d",x);
+}
+
+//OP : -1
+
+// (+(+x--)!=0)
+// + is give the same value even inside value is - or +
+// x--!=0
+// x = -1 , while loop not execute
+
+
+//Ty it out
+void main()
+{
+    int x=0,k;
+    while(+(+x--)==0)
+      x--;
+    printf("%d",x);
+}
+
+//OP : -3
+
+//x-- == 0
+
+
+void main()
+{
+    int x=0,k;
+    while(-(x--)==0)
+      x--;
+    printf("%d",x);
+}
+//op : -3
+
+
+//50)
+int main()
+{
+    reverse(1);
+}
+
+int reverse(int i){
+    if(i>5)
+      exit(0);
+    printf("%d\n",i);
+    return reverse(i++);
+}
+
+//op : infinite times it print 1
+//1 1 1 1 1 1 1 . .......
+
+
+int main()
+{
+    reverse(1);
+}
+
+int reverse(int i){
+    if(i>5)
+      exit(0);
+    printf("%d\n",i);
+    return reverse(++i);
+}
+
+//op : 1 2 3 4 5
