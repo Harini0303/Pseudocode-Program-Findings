@@ -369,3 +369,35 @@ public class Main {
 }
 
 // op : 60
+
+// 24)
+public class Main {
+    public static void main(String[] args) {
+        double d = 22.22;
+        byte b = (byte) (short) (int) (long) (float) d;
+        System.out.println(b);
+    }
+}
+
+// op : 22
+
+// 25)
+public class Main {
+    public static void main(String[] args) {
+        int i = 130;
+        byte b = (byte) i;
+        System.out.println(b);
+    }
+}
+
+// op : -126
+
+// The variable i is initialized with the value 130.
+// When i is cast to a byte, only the lower 8 bits of the integer 130 are
+// considered.
+// The binary representation of 130 in 8 bits is 10000010.
+// In Java, the byte data type is signed and can represent values from -128 to
+// 127. The binary 10000010 is interpreted as -126 in the signed byte
+// representation (since the most significant bit is 1, indicating a negative
+// number).
+// Therefore, the output is -126.
