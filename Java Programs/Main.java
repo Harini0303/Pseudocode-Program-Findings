@@ -193,3 +193,128 @@ public class Main {
 // ----->￿
 
 // 9)
+public class Main {
+    public static void main(String[] args) {
+        int i = 10;
+        byte b = i;
+        System.out.println(i + " " + b);
+    }
+}
+
+// op :
+// Error: incompatible types: possible lossy conversion from int to byte
+
+// 10)
+public class Main {
+    public static void main(String[] args) {
+        byte b = 65;
+        char c = b;
+        System.out.println(b + " " + c);
+    }
+}
+
+// op : Error: incompatible types: possible lossy conversion from byte to char
+
+// 11)
+public class Main {
+    public static void main(String[] args) {
+        char c = 'A';
+        short s = c;
+    }
+}
+
+// op : Error: incompatible types: possible lossy conversion from char to short
+
+// 12)
+public class Main {
+    public static void main(String[] args) {
+        char c = 'A';
+        int i = c;
+        System.out.println(c + " " + i);
+    }
+}
+
+// op :
+// A 65
+
+// 13)
+public class Main {
+    public static void main(String[] args) {
+        byte b = 128;
+        System.out.println(b);
+    }
+}
+
+// op :Error: incompatible types: possible lossy conversion from int to byte
+
+// 14)
+public class Main {
+    public static void main(String[] args) {
+        byte b1 = 60;
+        byte b2 = 70;
+        byte b = b1 + b2;
+        System.out.println(b);
+    }
+}
+
+// op : Error: incompatible types: possible lossy conversion from int to byte
+
+// 15)
+
+public class Main {
+    public static void main(String[] args) {
+        byte b1 = 30;
+        byte b2 = 30;
+        byte b = b1 + b2;
+        System.out.println(b);
+    }
+}
+
+// op :
+// Error: incompatible types: possible lossy conversion from int to byte
+
+// 16)
+public class Main {
+    public static void main(String[] args) {
+        long l = 10;
+        float f = l;
+        System.out.println(l + " " + f);
+    }
+}
+
+// op : 10 10.0
+
+// 17)
+public class Main {
+    public static void main(String[] args) {
+        float f = 22.22f;
+        long l = f;
+        System.out.println(f + " " + l);
+    }
+}
+
+// op : Error: incompatible types: possible lossy conversion from float to long
+
+// 18)
+public class Main {
+    public static void main(String[] args) {
+        int i = 10;
+        short s = (byte) i;
+        System.out.println(i + " " + s);
+    }
+}
+
+// op : 10 10
+
+// 19)
+public class Main {
+    public static void main(String[] args) {
+        byte b = 65;
+        char c = (char) b;
+        System.out.println(b + " " + c);
+    }
+}
+
+// op : 65 A
+
+// 20)
