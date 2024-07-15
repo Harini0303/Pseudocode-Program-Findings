@@ -318,3 +318,54 @@ public class Main {
 // op : 65 A
 
 // 20)
+
+public class Main {
+    public static void main(String[] args) {
+        char c = 'A';
+        short s = (short) c;
+        System.out.println(c + " " + s);
+    }
+}
+
+// op : A 65
+
+// 21)
+public class Main {
+    public static void main(String[] args) {
+        short s = 65;
+        char c = (byte) s;
+        System.out.println(s + " " + c);
+    }
+}
+
+// op : Main.java:4: error: incompatible types: possible lossy conversion from
+// byte to char
+// char c = (byte) s;
+
+// 22)
+
+public class Main {
+    public static void main(String[] args) {
+        byte b1 = 30;
+        byte b2 = 30;
+        byte b = (byte) b1 + b2;
+        System.out.println(b);
+    }
+}
+
+// op :
+// Main.java:5: error: incompatible types: possible lossy conversion from int to
+// byte
+// byte b = (byte) b1 + b2;
+
+// 23)
+public class Main {
+    public static void main(String[] args) {
+        byte b1 = 30;
+        byte b2 = 30;
+        byte b = (byte) (b1 + b2);
+        System.out.println(b);
+    }
+}
+
+// op : 60
