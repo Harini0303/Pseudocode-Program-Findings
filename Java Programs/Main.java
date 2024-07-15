@@ -88,3 +88,108 @@ class Test {
         System.out.println(b2 ^ b2);// false
     }
 }
+
+// 5)
+class Test {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 2;
+        System.out.println(a & b);
+        System.out.println(a | b);
+        System.out.println(a ^ b);
+        System.out.println(a << b);
+        System.out.println(a >> b);
+    }
+}
+
+// op :
+// 2
+// 10
+// 8
+// 40
+// 2
+
+// 56)
+class Test {
+    public static void main(String[] args) {
+        for (;;) {
+
+        }
+    }
+}
+
+// op : it will run it will not show error or output.
+
+// 6)
+public class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 10;
+        if ((a++ == 10) | (b++ == 10)) {
+            System.out.println(a + " " + b);
+        }
+        int c = 10;
+        int d = 10;
+        if ((c++ == 10) || (d++ == 10)) {
+            System.out.println(c + " " + d);
+        }
+    }
+}
+
+// op :
+// 11 11
+// 11 10
+
+// 7)
+public class Main {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 10;
+        if ((a++ != 10) & (b++ != 10)) {
+        }
+        System.out.println(a + " " + b);
+        int c = 10;
+        int d = 10;
+        if ((c++ != 10) && (d++ != 10)) {
+        }
+        System.out.println(c + " " + d);
+    }
+}
+
+// op :
+// 11 11
+// 11 10
+
+// 8)
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Byte.MIN_VALUE + "----->" + Byte.MAX_VALUE);
+        System.out.println(Short.MIN_VALUE + "---->" + Short.MAX_VALUE);
+        System.out.println(Integer.MIN_VALUE + "----->" + Integer.MAX_VALUE);
+        System.out.println(Long.MIN_VALUE + "----->" + Long.MAX_VALUE);
+        System.out.println(Float.MIN_VALUE + "----->" + Float.MAX_VALUE);
+        System.out.println(Double.MIN_VALUE + "----->" + Double.MAX_VALUE);
+        System.out.println(Character.MIN_VALUE + "----->" + Character.MAX_VALUE);
+        // System.out.println(Boolean.MIN_VALUE + "----->" + Boolean.MAX_VALUE);
+    }
+}
+
+// -128----->127
+// -32768---->32767
+// -2147483648----->2147483647
+// -9223372036854775808----->9223372036854775807
+// 1.4E-45----->3.4028235E38
+// 4.9E-324----->1.7976931348623157E308
+// 0----->65535
+// false----->true
+
+// op :
+// -128----->127
+// -32768---->32767
+// -2147483648----->2147483647
+// -9223372036854775808----->9223372036854775807
+// 1.4E-45----->3.4028235E38
+// 4.9E-324----->1.7976931348623157E308
+// ----->￿
+
+// 9)
