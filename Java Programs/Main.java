@@ -401,3 +401,69 @@ public class Main {
 // representation (since the most significant bit is 1, indicating a negative
 // number).
 // Therefore, the output is -126.
+
+// 26)
+public class Main {
+    public static void main(String[] args) {
+        int i = 10;
+        int j;
+        if (i == 10) {
+            j = 20;
+        }
+        System.out.println(j);
+    }
+}
+
+// op :
+// error: variable j might not have been initialized
+
+// 27)
+
+public class Main {
+    public static void main(String[] args) {
+        int i = 10;
+        int j;
+        if (i == 10) {
+            j = 20;
+        } else {
+            j = 30;
+        }
+        System.out.println(j);
+    }
+}
+
+// op : 20
+
+// 28)
+public class Main {
+    public static void main(String[] args) {
+        int i = 10;
+        int j;
+        if (i == 10) {
+            j = 20;
+        } else if (i == 20) {
+            j = 30;
+        }
+        System.out.println(j);
+    }
+}
+
+// op : error : j might not been initialised
+
+// 29)
+public class Main {
+    public static void main(String[] args) {
+        int i = 10;
+        int j;
+        if (i == 10) {
+            j = 20;
+        } else if (i == 20) {
+            j = 30;
+        } else {
+            j = 40;
+        }
+        System.out.println(j);
+    }
+}
+
+// op : 20
