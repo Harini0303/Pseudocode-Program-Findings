@@ -632,3 +632,163 @@ public class Main {
 }
 
 // op : no output . but the code will run
+
+// 38)
+
+public class Main {
+    public static void main(String[] args) {
+        byte b = 126;
+        switch (b) {
+            case 125:
+                System.out.println("125");
+                break;
+            case 126:
+                System.out.println("126");
+                break;
+            case 127:
+                System.out.println("127");
+                break;
+            case 128:
+                System.out.println("128");
+                break;
+            default:
+                System.out.println("Default");
+                break;
+        }
+    }
+}
+
+// op : Main.java:17: error: incompatible types: possible lossy conversion from
+// int to byte
+
+// 39)
+public class Main {
+    public static void main(String[] args) {
+        final int i = 5, j = 10, k = 15, l = 20;
+        switch (10) {
+            case i:
+                System.out.println("Five");
+                break;
+            case j:
+                System.out.println("Ten");
+                break;
+            case k:
+                System.out.println("Fifteen");
+                break;
+            case l:
+                System.out.println("Twenty");
+                break;
+            default:
+                System.out.println("Default");
+                break;
+        }
+    }
+}
+
+// op : Ten
+
+// 40)
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+// op :
+// 0
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+// 8
+// 9
+
+// 41)
+public class Main {
+    public static void main(String[] args) {
+        int i = 0;
+        for (; i < 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+// op :
+// same as previous output
+
+// 42)
+public class Main {
+    public static void main(String[] args) {
+        int i = 0;
+        for (System.out.println("Hello"); i < 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+// op :
+// Hello
+// 0
+// 1
+// 2
+// 3
+// 4
+// 5
+// 6
+// 7
+// 8
+// 9
+
+// 43)
+public class Main {
+    public static void main(String[] args)
+    {
+    for(int i=0, float f=0.0f ;i<10 && f<10.0f; i++,f++)
+    {
+    System.out.println(i+" "+f);
+    }
+    }
+}
+
+// op : error
+// The given code contains a syntax error. In Java, you cannot declare variables
+// of different types in a single for loop initialization. Each type must be
+// declared in a separate statement.
+
+// 44)
+public class Main {
+    public static void main(String[] args) {
+     for (int i = 0, int j = 0; i < 10 && j < 10; i++, j++) {
+     System.out.println(i + " " + j);
+     }
+     }
+}
+
+// op : error
+
+// 45)
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0, j = 0; i < 10 && j < 10; i++, j++) {
+            System.out.println(i + " " + j);
+        }
+    }
+}
+
+// op :
+
+// 0 0
+// 1 1
+// 2 2
+// 3 3
+// 4 4
+// 5 5
+// 6 6
+// 7 7
+// 8 8
+// 9 9
