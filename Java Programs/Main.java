@@ -467,3 +467,168 @@ public class Main {
 }
 
 // op : 20
+
+// 30)
+
+public class Main {
+    public static void main(String[] args) {
+        final int i = 10;
+        int j;
+        if (i == 10) {
+            j = 20;
+        }
+        System.out.println(j);
+    }
+}
+
+// op : 20
+
+// 31)
+public class Main {
+    public static void main(String[] args) {
+        int j;
+        if (true) {
+            j = 20;
+        }
+        System.out.println(j);
+    }
+}
+
+// op : 20
+
+// 32)
+public class Main {
+    public static void main(String[] args) {
+        int i = 10;
+        switch (i) {
+            case 5:
+                System.out.println("Five");
+                break;
+            case 10:
+                System.out.println("Ten");
+                break;
+            case 15:
+                System.out.println("Fifteen");
+                break;
+            case 20:
+                System.out.println("Twenty");
+                break;
+            default:
+                System.out.println("Default");
+                break;
+        }
+    }
+}
+
+// Op : 10
+
+// 33)
+
+public class Main {
+    public static void main(String[] args) {
+        char c = 'B';
+        switch (c) {
+            case 'A':
+                System.out.println("Five");
+                break;
+            case 'B':
+                System.out.println("Ten");
+                break;
+            case 'C':
+                System.out.println("Fifteen");
+                break;
+            default:
+                System.out.println("Default"); // ("Default”) - it show error ( because of its showing)
+                break;
+        }
+
+    }
+}
+
+// op : Ten
+
+// 34)
+public class Main {
+    public static void main(String[] args) {
+        String str = "BBB";
+        switch (str) {
+            case "AAA":
+                System.out.println("AAA");
+                break;
+            case "BBB":
+                System.out.println("BBB");
+                break;
+            case "CCC":
+                System.out.println("CCC");
+                break;
+            case "DDD":
+                System.out.println("DDD");
+                break;
+            default:
+                System.out.println("Default");
+                break;
+        }
+    }
+}
+
+// OP : BBB
+
+// 35)
+
+public class Main {
+    public static void main(String[] args) {
+        int i = 10;
+        switch (i) {
+            default:
+                System.out.println("Default");
+                break;
+        }
+    }
+}
+
+// OP : Default
+
+// 36)
+
+public class Main {
+    public static void main(String[] args) {
+        int i = 10;
+        switch (i) {
+            case 5:
+                System.out.println("Five");
+                break;
+            case 10:
+                System.out.println("Ten");
+                break;
+            case 15:
+                System.out.println("Fifteen");
+                break;
+        }
+    }
+}
+
+// op : Ten
+
+// 37)
+
+public class Main {
+    public static void main(String[] args) {
+        int i = 50;
+        switch (i) {
+            case 5:
+                System.out.println("Five");
+                break;
+            case 10:
+                System.out.println("Ten");
+                break;
+            case 15:
+                System.out.println("Fifteen");
+                break;
+            case 20:
+                System.out.println("Twenty");
+                break;
+        }
+    }
+}
+
+// op : no output . but the code will run
