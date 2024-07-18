@@ -792,3 +792,63 @@ public class Main {
 // 7 7
 // 8 8
 // 9 9
+
+// 46)
+
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0;; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+// OP :
+// 0
+// 1
+// 2
+// 3
+// 4
+// 5
+// ...
+
+// The program will print the value of i in each iteration, and since there is
+// no condition to break the loop, it will run indefinitely, printing increasing
+// values of i.
+
+// Note that this is an example of an infinite loop, which will continue to
+// execute until the program is manually stopped or an error occurs.
+
+// Here's a fun fact: If you run this program, it will eventually print out the
+// maximum value that an int can hold in Java, which is 2,147,483,647. After
+// that, it will start printing negative numbers due to integer overflow!
+
+// 47)
+
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; System.out.println("Hello"); i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+// op : error: incompatible types: void cannot be converted to boolean
+
+// 48)
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Before Loop");
+        for (int i = 0; i <= 0 || i >= 0; i++) {
+            System.out.println("Inside Loop");
+        }
+        System.out.println("After Loop");
+    }
+}
+
+// op:
+// Inside Loop
+// ..
+// ..
+// (infinite)
