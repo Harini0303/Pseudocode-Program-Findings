@@ -852,3 +852,118 @@ public class Main {
 // ..
 // ..
 // (infinite)
+
+// 49)
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Before Loop");
+        for (int i = 0; true; i++) {
+            System.out.println("Inside Loop");
+        }
+        System.out.println("After Loop");
+    }
+}
+
+// op:
+// error : : unreachable statement
+// The error message "unreachable statement" means that the compiler has
+// detected that the statement System.out.println("After Loop"); will never be
+// executed.
+
+// This is because the for loop preceding it has a condition that is always
+// true, making it an infinite loop. The loop will never terminate, so the
+// statement after it will never be reached.
+
+// 50)
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Before Loop");
+        for (int i = 0;; i++) {
+            System.out.println("Inside Loop");
+        }
+        System.out.println("After Loop");
+    }
+}
+
+// op : same error
+
+// 51)
+
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10;) {
+            System.out.println(i);
+            i = i + 1;
+        }
+    }
+}
+
+// op : 0 1 ... 9
+
+// 52)
+
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; System.out.println("Hello")) {
+            System.out.println(i);
+            i = i + 1;
+        }
+    }
+}
+
+// op :
+// 0
+// Hello
+// 1
+// Hello
+// 2
+// Hello
+// 3
+// Hello
+// 4
+// Hello
+// 5
+// Hello
+// 6
+// Hello
+// 7
+// Hello
+// 8
+// Hello
+// 9
+// Hello
+
+// 53)
+
+public class Main {
+public static void main(String[] args) {
+for(;;)
+ }
+}
+
+// op : Main.java:7: error: illegal start of statement
+
+// 54)
+class Test {
+    public static void main(String[] args) {
+        for (;;) {
+        }
+    }
+}
+
+// op :No error! This code will compile and run, but it will result in an
+// infinite loop that does nothing.
+
+// 55)
+public class Main {
+    public static void main(String[] args) {
+        for (;;)
+            ;
+    }
+}
+
+// op :
+// No error! This code will also compile and run, resulting in an infinite loop
+// that does nothing. The empty statement ; is a valid loop body.
