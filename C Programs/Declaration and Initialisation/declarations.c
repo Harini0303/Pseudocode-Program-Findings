@@ -233,7 +233,117 @@ int main()
 //Explanation:
 //When an automatic structure is partially initialized remaining elements are initialized to 0(zero).
 
+//6.
+#include<stdio.h>
+int X=40;
+int main()
+{
+    int X=20;
+    printf("%d\n", X);
+    return 0;
+}
+
+// op : 20
+// Whenever there is conflict between a local variable and global variable, the local variable gets priority.
+
+//7.
+#include<stdio.h>
+int main()
+{
+    int x = 10, y = 20, z = 5, i;
+    i = x < y < z;
+    printf("%d\n", i);
+    return 0;
+}
+
+// op : 1
+//Since x < y turns to be TRUE it is replaced by 1. Then 1 < z is compared and to be TRUE. The 1 is assigned to i.
 
 
+//8.
+#include<stdio.h>
+int main()
+{
+    extern int fun(float);
+    int a;
+    a = fun(3.14);
+    printf("%d\n", a);
+    return 0;
+}
+int fun(int aa)
+{
+	return (int)++aa;
+}
+
+// op : 
+// Compile Error
+
+// Explanation:
+// 2 Errors
+// 1. Type mismatch in redeclaration of fun
+// 2. Type mismatch in parameter aa
+
+//9.
+#include<stdio.h>
+int main()
+{
+    int a[5] = {2, 3};
+    printf("%d, %d, %d\n", a[2], a[3], a[4]);
+    return 0;
+}
+
+// op : 0,0,0
+
+// Explanation:
+// When an automatic array is partially initialized, the remaining elements are initialized to 0.
 
 
+//10.
+#include<stdio.h>
+int main()
+{
+    union a
+    {
+        int i;
+        char ch[2];
+    };
+    union a u;
+    u.ch[0] = 3;
+    u.ch[1] = 2;
+    printf("%d, %d, %d\n", u.ch[0], u.ch[1], u.i);
+    return 0;
+}
+
+// op : 3,2, 515
+
+// Explanation:
+// printf("%d, %d, %d\n", u.ch[0], u.ch[1], u.i); It prints the value of u.ch[0] = 3, u.ch[1] = 2 and it prints the value of u.i means the value of entire union size.
+// So the output is 3, 2, 515.
+
+//11.
+#include<stdio.h>
+int main()
+{
+    int i=5;
+    for(;scanf("%s", &i); printf("%d\n", i));
+    return 0;
+}
+
+// op : The for loop would get executed infinite times
+
+//12.
+#include<stdio.h>
+int main()
+{
+    int X=40;
+    {
+        int X=20;
+        printf("%d ", X);
+    }
+    printf("%d\n", X);
+    return 0;
+}
+
+// op : 20 40
+// Explanation:
+// In case of a conflict between a local variable and global variable, the local variable gets priority.
