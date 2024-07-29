@@ -1,3 +1,5 @@
+        //GENERAL QUESTIONS 
+ 
 //1. Which of the following statements should be used to obtain a remainder after dividing 3.14 by 2.1 ?
 
 // op : rem = fmod(3.14, 2.1);
@@ -123,3 +125,115 @@ int a=20;
 // Explanation:
 // - During declaration we tell the datatype of the Variable.
 // - During definition the value is initialized.
+
+// 11.
+// When we mention the prototype of a function?
+// op :  Declaring
+
+// Explanation:
+// A function prototype in C or C++ is a declaration of a function that omits the function body but does specify the function's name, argument types and return type.
+// While a function definition specifies what a function does, a function prototype can be thought of as specifying its interface.
+
+                            // FIND THE OUTPUT OF PROGRAM
+
+//1.
+#include<stdio.h>
+int main()
+{
+    enum status { pass, fail, atkt};
+    enum status stud1, stud2, stud3;
+    stud1 = pass;
+    stud2 = atkt;
+    stud3 = fail;
+    printf("%d, %d, %d\n", stud1, stud2, stud3);
+    return 0;
+}
+
+// OP : 0,2,1
+// Explanation:
+// enum takes the format like {0,1,2..) so pass=0, fail=1, atkt=2
+// stud1 = pass (value is 0)
+// stud2 = atkt (value is 2)
+// stud3 = fail (value is 1)
+// Hence it prints 0, 2, 1
+
+//2.
+#include<stdio.h>
+int main()
+{
+    extern int i;
+    i = 20;
+    printf("%d\n", sizeof(i));
+    return 0;
+}
+
+// OP : 
+// Linker Error : Undefined symbol 'i'
+
+// The statement extern int i specifies to the compiler that the memory for 'i' is allocated in some other program and that 
+//address will be given to the current program at the time of linking. But linker finds that no other variable of name 'i' is
+// available in any other program with memory space allocated for it. Hence a linker error has occurred.
+
+
+//3.
+#include<stdio.h>
+int main()
+{
+    extern int a;
+    printf("%d\n", a);
+    return 0;
+}
+int a=20;
+
+// op : 20
+// Explanation:
+// extern int a; indicates that the variable a is defined elsewhere, usually in a separate source code module.
+
+// printf("%d\n", a); it prints the value of local variable int a = 20. Because, whenever there is a conflict between local variable and 
+//global variable, local variable gets the highest priority. So it prints 20.
+
+//4.
+#include<stdio.h>
+int main()
+{
+    char *s1;
+    char far *s2;
+    char huge *s3;
+    printf("%d, %d, %d\n", sizeof(s1), sizeof(s2), sizeof(s3));
+    return 0;
+}
+
+// op : 2, 4, 4
+// Explanation:
+// Any pointer size is 2 bytes. (only 16-bit offset)
+// So, char *s1 = 2 bytes.
+// So, char far *s2; = 4 bytes.
+// So, char huge *s3; = 4 bytes.
+// A far, huge pointer has two parts: a 16-bit segment value and a 16-bit offset value.
+// Since C is a compiler dependent language, it may give different output in other platforms. The above program works fine in Windows (TurboC), but error in Linux (GCC Compiler).
+
+
+//5.
+#include<stdio.h>
+int main()
+{
+    struct emp
+    {
+        char name[20];
+        int age;
+        float sal;
+    };
+    struct emp e = {"Tiger"};
+    printf("%d, %f\n", e.age, e.sal);
+    return 0;
+}
+
+// op : 0, 0.000000
+
+//Explanation:
+//When an automatic structure is partially initialized remaining elements are initialized to 0(zero).
+
+
+
+
+
