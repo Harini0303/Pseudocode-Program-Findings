@@ -347,3 +347,60 @@ int main()
 // op : 20 40
 // Explanation:
 // In case of a conflict between a local variable and global variable, the local variable gets priority.
+
+
+            //POINT OUT ERRORS
+
+//1.
+#include<stdio.h>
+int main()
+{
+    display();
+    return 0;
+}
+void display()
+{
+    printf("IndiaBIX.com");
+}
+
+// op :  display() is called before it is defined
+
+// Explanation:
+// In this program the compiler will not know that the function display() exists. So, the compiler will generate "Type mismatch in redeclaration of function display()".
+// To over come this error, we have to add function prototype of function display().
+// Another way to overcome this error is to define the function display() before the int main(); function.
+
+//2.
+#include<stdio.h>
+int main()
+{
+    void v = 0;
+
+    printf("%d", v);
+
+    return 0;
+}
+
+// op : 
+//Error: Declaration syntax error 'v' (or) Size of v is unknown or zero.
+
+
+//3.
+#include<stdio.h>
+struct emp
+{
+    char name[20];
+    int age;
+};
+int main()
+{
+    emp int xx;
+    int a;
+    printf("%d\n", &a);
+    return 0;
+}
+
+// op : Error: in emp int xx;
+// Explanation:
+// There is an error in the line emp int xx;
+// To overcome this error, remove the int and add the struct at the begining of emp int xx;
