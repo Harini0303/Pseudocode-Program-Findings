@@ -404,3 +404,62 @@ int main()
 // Explanation:
 // There is an error in the line emp int xx;
 // To overcome this error, remove the int and add the struct at the begining of emp int xx;
+
+
+//4.
+//Which of the following is correct about err used in the declaration given below?
+ typedef enum error { warning, test, exception } err;
+// op : It is a typedef for enum error.
+// A typedef gives a new name to an existing data type.
+// So err is a new name for enum error.
+
+
+//5.
+#include<stdio.h>
+int main()
+{
+    int (*p)() = fun;
+    (*p)();
+    return 0;
+}
+int fun()
+{
+    printf("IndiaBix.com\n");
+    return 0;
+}
+
+// op : Error: fun() prototype not defined
+
+// The compiler will not know that the function int fun() exists. So we have to define the function prototype of int fun();
+// To overcome this error, see the below program
+
+// #include<stdio.h>
+// int fun(); /* function prototype */
+
+// int main()
+// {
+//     int (*p)() = fun;
+//     (*p)();
+//     return 0;
+// }
+// int fun()
+// {
+//     printf("IndiaBix.com\n");
+//     return 0;
+// }
+
+
+//6.
+//Which of the declaration is correct?
+// op : int length;
+
+
+//7.
+// Which of the following operations are INCORRECT?
+// int i = 35; i = i%5;
+// short int j = 255; j = j;
+// long int k = 365L; k = k;
+// op :  float a = 3.14; a = a%3;
+
+
+
