@@ -579,3 +579,59 @@ int main()
 //7.
 //Range of float id -2.25e+308 to 2.25e+308
 // False, The range of float is -3.4e+38 to 3.4e+38.
+
+
+
+// Yes / No Questions
+
+
+// 1.
+// Is there any difference in the following declarations?
+// int myfun(int arr[]);
+// int myfun(arr[20]);
+// Yes
+
+// 2.
+// Suppose a program is divided into three files f1, f2 and f3, and a variable is defined in the file f1 but used in files f2 and f3. In such a case would we need the extern declaration for the variables in the files f2 and f3?
+// Yes
+
+
+// 3.
+// Global variable are available to all functions. Does there exist a mechanism by way of which it available to some and not to others.
+// NO
+
+
+//4.
+
+// Is it true that a global variable may have several declarations, but only one definition?
+// Yes
+//  In all the global variable declarations, you need to use the keyword extern.
+
+
+// 5.
+// Is it true that a function may have several declarations, but only one definition?
+// Yes
+
+// Yes, but the function declarations must be identical.
+
+// Example:
+
+#include<stdio.h>
+
+void Display();
+void Display();
+void Display();
+
+void Display()
+{
+   printf("Weclome to IndiaBIX.com..!");
+}
+
+int main()
+{
+    Display();
+    return 0;
+}
+
+//Output:
+// Weclome to IndiaBIX.com..!
