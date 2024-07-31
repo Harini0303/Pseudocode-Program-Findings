@@ -516,3 +516,66 @@ struct book
 
 // typedef long a;
 // extern a c; while compiling this statement becomes extern long c;. This is a valid c declaration statement. It says variable c is long data type and defined in some other file or module.
+
+
+
+// TRUE OR FALSE
+
+// 1.
+// A long double can be used if range of a double is not enough to accommodate a real number.
+// op : true
+
+// True, we can use long double; if double range is not enough.
+// double = 8 bytes.
+// long double = 10 bytes.
+
+
+//2.
+//A float is 4 bytes wide, whereas a double is 8 bytes wide.
+// true
+// float = 4 bytes.
+// double = 8 bytes.
+
+
+// 3.
+// If the definition of the external variable occurs in the source file before its use in a particular function, then there is no need for an extern declaration in the function.
+// True
+//True, When a function is declared inside the source file, that function(local function) get a priority than the extern function. So there is no need to declare a function as extern inside the same source file.
+
+
+// 4.
+// Size of short integer and long integer can be verified using the sizeof() operator.
+// True
+
+// True, we can find the size of short integer and long integer using the sizeof() operator.
+// Example:
+#include<stdio.h>
+int main()
+{
+    short int i = 10;
+    long int j = 10;
+    printf("short int is %d bytes.,\nlong int is %d bytes.",
+            sizeof(i),sizeof(j));
+    return 0;
+}
+// Output:
+// short int is 2 bytes.
+// long int is 4 bytes.
+
+
+//5.
+//Range of double is -1.7e-38 to 1.7e+38 (in 16 bit platform - Turbo C under DOS)
+//False
+// The range of double is -1.7e+308 to 1.7e+308.
+
+
+// 6.
+// Size of short integer and long integer would vary from one platform to another.
+// True
+
+//Depending on the operating system/compiler/system architecture you are working on, the range of data types can vary.
+
+
+//7.
+//Range of float id -2.25e+308 to 2.25e+308
+// False, The range of float is -3.4e+38 to 3.4e+38.
