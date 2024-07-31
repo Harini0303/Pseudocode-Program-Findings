@@ -462,4 +462,57 @@ int fun()
 // op :  float a = 3.14; a = a%3;
 
 
+//8.
+//Which of the following correctly represents a long double constant?
 
+// op :  6.68L
+// 6.68 is double.
+// 6.68L is long double constant.
+// 6.68f is float constant.
+// 6.68LF is not allowed in c.
+
+
+//9.
+//Which of the structure is INCORRECT?
+
+struct aa
+{
+    int a;
+    float b;
+    struct aa var;
+};
+
+// it gives "Undefined structure in 'aa'" error.
+
+
+//10.
+//Which of the structure is correct?
+struct book
+{
+    char name[10];
+    float price;
+    int pages;
+};
+
+// result : semicolon is important
+
+
+//11.
+
+// 1 :	typedef long a;
+// extern int a c;
+// 2 :	typedef long a;
+// extern a int c;
+// 3 :	typedef long a;
+// extern a c;
+
+
+// op : 3 correct
+// typedef long a;
+// extern int a c; while compiling this statement becomes extern int long c;. This will result in to "Declaration syntax error".
+
+// typedef long a;
+// extern a int c; while compiling this statement becomes extern long int c;. This will result in to "Too many types in declaration error".
+
+// typedef long a;
+// extern a c; while compiling this statement becomes extern long c;. This is a valid c declaration statement. It says variable c is long data type and defined in some other file or module.
