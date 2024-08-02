@@ -63,8 +63,6 @@ int main()
 
 // To extend the precision further we can use long double which occupies 10 bytes of memory space.
 
-
-
 //7.
 
 //Which of the following is not user defined data type?
