@@ -1,9 +1,7 @@
         //GENERAL QUESTIONS 
  
 //1. Which of the following statements should be used to obtain a remainder after dividing 3.14 by 2.1 ?
-
 // op : rem = fmod(3.14, 2.1);
-
 //2. What are the types of linkages?
 
 // op : External, Internal and None
