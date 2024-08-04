@@ -49,3 +49,66 @@ class Test {
 // The boolean b1 in the fix() method is a different boolean than the b1 in the
 // start() method. The b1 in the start() method is not updated by the fix()
 // method.
+
+// 3.
+class PassS {
+    public static void main(String[] args) {
+        PassS p = new PassS();
+        p.start();
+    }
+
+    void start() {
+        String s1 = "slip";
+        String s2 = fix(s1);
+        System.out.println(s1 + " " + s2);
+    }
+
+    String fix(String s1) {
+        s1 = s1 + "stream";
+        System.out.print(s1 + " ");
+        return "stream";
+    }
+}
+
+// op : slipstream slip stream
+
+// 4.
+class BitShift {
+    public static void main(String[] args) {
+        int x = 0x80000000;
+        System.out.print(x + " and  ");
+        x = x >>> 31;
+        System.out.println(x);
+    }
+}
+
+// op : -2147483648 and 1
+
+// The >>> operator moves all bits to the right, zero filling the left bits. The
+// bit transformation looks like this:
+// Before: 1000 0000 0000 0000 0000 0000 0000 0000
+// After: 0000 0000 0000 0000 0000 0000 0000 0001
+
+// 5.
+class Equals {
+    public static void main(String[] args) {
+        int x = 100;
+        double y = 100.1;
+        boolean b = (x = y); /* Line 7 */
+        System.out.println(b);
+    }
+}
+
+// op :
+// Compilation fails
+
+// 6.
+class Test {
+    public static void main(String[] args) {
+        int x = 20;
+        String sup = (x < 15) ? "small" : (x < 22) ? "tiny" : "huge";
+        System.out.println(sup);
+    }
+}
+
+// op : tiny
