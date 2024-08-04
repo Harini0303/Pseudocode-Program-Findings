@@ -1,3 +1,4 @@
+
 // 1.
 // What will be the output of the program?
 class PassA {
@@ -292,3 +293,32 @@ public class Test {
 }
 
 // op : 4
+
+// Operators and Assignments - Pointing out the correct statements
+
+// 1.
+// import java.awt.*;
+
+// class Ticker extends Component {
+// public static void main(String[] args) {
+// Ticker t = new Ticker();
+// /* Missing Statements ? */
+// }
+// }
+
+// which two of the following statements, inserted independently, could legally
+// be inserted into missing section of this code?
+// boolean test = (Component instanceof t);
+// boolean test = (t instanceof Ticker);
+// boolean test = t.instanceof(Ticker);
+// boolean test = (t instanceof Component);
+
+// op : 2 and 4
+// (2) is correct because class type Ticker is part of the class hierarchy of t;
+// therefore it is a legal use of the instanceof operator. (4) is also correct
+// because Component is part of the hierarchy of t, because Ticker extends
+// Component.
+// (1) is incorrect because the syntax is wrong. A variable (or null) always
+// appears before the instanceof operator, and a type appears after it. (3) is
+// incorrect because the statement is used as a method (t.instanceof(Ticker);),
+// which is illegal.
